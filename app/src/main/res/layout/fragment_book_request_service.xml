@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/x15">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10"
+
+            android:background="@drawable/btn"
+            android:orientation="horizontal">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyEditTextView
+                android:id="@+id/edt_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/x10"
+                android:background="@null"
+                android:hint="@string/job_title"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/app_font_gray"
+                android:textColorHint="@color/app_font_gray"
+                android:textSize="@dimen/x14"
+                app:typeface="@string/font_normal" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/btn"
+            android:orientation="horizontal">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnySpinner
+                android:id="@+id/spn_jobtype"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x40"
+                android:layout_gravity="center" />
+        </FrameLayout>
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_jobselected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="@string/selected_jobs"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
+
+
+        <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+            android:id="@+id/listView_jobselected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_jobadditional"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="@string/additional_job"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyEditTextView
+            android:id="@+id/edt_addtional_job"
+            style="@style/form_edttext_fields_style"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x100"
+            android:background="@drawable/btn"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/addtional_job_description"
+            android:imeOptions="actionDone"
+            android:inputType="textMultiLine"
+            android:maxHeight="@dimen/x100"
+            android:overScrollMode="always"
+            android:padding="@dimen/x10"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textColor="@color/app_font_gray"
+            android:textColorHint="@color/app_font_gray"
+            app:typeface="@string/font_normal" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_joblocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="@string/location"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.ingic.ezhalbatek.technician.ui.views.AutoCompleteLocation
+                android:id="@+id/edt_locationgps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@+id/img_gps"
+                android:background="@null"
+                android:imeOptions="actionNext"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/app_font_gray"
+                android:textColorHint="@color/app_font_gray"
+                android:textSize="@dimen/x15"
+                app:background_layout="@null"
+                app:hint_text="@string/location_dummy"
+                app:hint_text_color="@color/app_font_gray"
+                app:text_color="@color/app_font_gray" />
+
+            <ImageView
+                android:id="@+id/img_gps"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/x10"
+                android:src="@drawable/location_target" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="@dimen/x10_"
+            android:layout_marginStart="@dimen/x10_"
+            android:background="@color/app_font_gray" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="@string/address_request"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x5">
+
+            <ImageView
+                android:id="@+id/img_location_image"
+                android:layout_width="@dimen/x20"
+                android:layout_height="@dimen/x20"
+                android:layout_centerVertical="true"
+                android:src="@drawable/location"
+                android:visibility="gone" />
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyEditTextView
+                android:id="@+id/edt_locationspecific"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x35"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="@dimen/x10"
+                android:layout_toEndOf="@+id/img_location_image"
+                android:background="@null"
+                android:drawablePadding="@dimen/x10"
+                android:hint="@string/location_dummy"
+                android:imeOptions="actionDone"
+                android:maxLength="50"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/app_font_gray"
+                android:textColorHint="@color/app_font_gray"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginEnd="@dimen/x10_"
+            android:layout_marginStart="@dimen/x10_"
+            android:background="@color/app_font_gray" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_jobpreferedDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingBottom="@dimen/x10"
+            android:paddingTop="@dimen/x10"
+            android:text="@string/preferred_date_time"
+            android:textColor="@color/app_red"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x60"
+                android:layout_marginRight="@dimen/x5"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:id="@+id/ll_btnDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x10">
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@drawable/date" />
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/btn_preferreddate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x5"
+                        android:layout_marginStart="@dimen/x5"
+                        android:gravity="center_vertical"
+                        android:hint="@string/select_date"
+                        android:textColor="@color/app_font_gray"
+                        android:textColorHint="@color/app_font_gray"
+                        android:textSize="@dimen/x15"
+                        app:typeface="@string/font_normal_dark"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/x60"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_weight="1"
+                android:background="@drawable/btn"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_btnTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/x10">
+
+                    <ImageView
+                        android:layout_width="@dimen/x20"
+                        android:layout_height="@dimen/x20"
+                        android:src="@drawable/time" />
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/btn_preferredtime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x5"
+                        android:layout_marginStart="@dimen/x5"
+                        android:gravity="center_vertical"
+                        android:hint="@string/select_time"
+                        android:textColor="@color/app_font_gray"
+                        android:textColorHint="@color/app_font_gray"
+                        android:textSize="@dimen/x15"
+                        app:typeface="@string/font_normal_dark" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x90"
+            android:layout_marginBottom="@dimen/x10"
+            android:orientation="horizontal"
+            android:padding="@dimen/x10">
+
+            <LinearLayout
+                android:id="@+id/btn_addimage"
+                android:layout_width="@dimen/x80"
+                android:layout_height="@dimen/x80"
+                android:background="@drawable/btn_red"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/camera" />
+            </LinearLayout>
+            <!--  <include layout="@layout/horizontal_images_items"/>-->
+            <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+                android:id="@+id/addimages"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/x10"
+                android:orientation="horizontal"
+                app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/chkPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:button="@drawable/selector_chkbox"
+            android:checked="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x10"
+            android:text="@string/payment_option_value"
+            android:textColor="@color/app_font_gray" />
+
+        <CheckBox
+            android:id="@+id/chkTermPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x20"
+            android:button="@drawable/selector_chkbox"
+            android:checked="true"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/x10"
+            android:text="@string/term_option_value"
+            android:textColor="@color/app_font_gray" />
+
+        <Button
+            android:id="@+id/btnBook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/x20"
+            android:background="@drawable/button_red"
+            android:text="@string/book_service"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</ScrollView>

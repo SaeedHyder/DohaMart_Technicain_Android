@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginTop="@dimen/x5"
+            app:cardCornerRadius="@dimen/x5"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/x5"
+                android:layout_marginRight="@dimen/x5"
+                android:padding="@dimen/x10">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x2"
+                        android:text="@string/customer_no"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtSubscriptionID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x2"
+                        android:text="@string/customer_name"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:maxLines="1"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x2"
+                        android:text="@string/address"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtSubscriptionPackage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textAlignment="viewStart"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x2"
+                        android:text="@string/mobile_no"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtMobileNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x2"
+                        android:text="@string/date"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txtMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="@dimen/x17"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            android:paddingEnd="@dimen/x2"
+            android:visibility="gone"
+            android:text="@string/monthly_maintainence"
+            android:textColor="@color/app_font_gray"
+            android:textSize="@dimen/x14"
+            app:typeface="@string/font_normal_dark"/>
+
+        <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+            android:id="@+id/rvRooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"/>
+
+        <Button
+            android:id="@+id/btnMoreRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginTop="@dimen/x10"
+            android:layout_marginBottom="@dimen/x10"
+            android:background="@drawable/button_gray"
+            android:text="@string/create_room"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btnCreate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            android:background="@drawable/button_red"
+            android:text="@string/create_room"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btnDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/x15"
+            android:layout_marginRight="@dimen/x15"
+            android:layout_marginBottom="@dimen/x10"
+            android:background="@drawable/button_red"
+            android:text="@string/done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

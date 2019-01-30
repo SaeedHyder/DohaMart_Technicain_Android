@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/mainFrame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+
+        <RelativeLayout
+            android:id="@+id/rl_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="start"
+                android:layout_toStartOf="@+id/txtQuantity"
+                android:gravity="start"
+                android:paddingEnd="@dimen/x2"
+                android:paddingStart="@dimen/x15"
+                android:text="@string/item"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/x14"
+                app:typeface="@string/font_normal_dark"/>
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="start"
+                android:layout_marginEnd="@dimen/x20"
+                android:gravity="center"
+                android:paddingEnd="@dimen/x2"
+                android:text="@string/quantity"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/x14"
+                app:typeface="@string/font_normal_dark"/>
+        </RelativeLayout>
+
+        <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+            android:id="@+id/rvAccessories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+        <Button
+            android:id="@+id/btnAddAccessories"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/button_gray"
+            android:text="@string/add_accessories"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/button_red"
+            android:text="@string/update"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            />
+
+    </LinearLayout>
+</ScrollView>

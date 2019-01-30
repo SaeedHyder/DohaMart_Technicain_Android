@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingTop="@dimen/x20">
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txt_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x50"
+        android:background="@drawable/additional_parent_item_border"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/x15"
+        android:paddingStart="@dimen/x15"
+        android:text="Ac Repair"
+        android:textColor="@color/black"
+        android:textSize="@dimen/x15"
+        app:typeface="@string/font_bold" />
+
+    <ImageView
+        android:id="@+id/imgGroupIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/x10"
+        android:paddingTop="@dimen/x20"
+        android:src="@drawable/downarrow_red" />
+
+</RelativeLayout>

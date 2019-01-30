@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/x15"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_selected"
+        android:layout_width="@dimen/x17"
+        android:layout_height="@dimen/x17"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:src="@drawable/ic_launcher" />
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txt_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_selected"
+        android:maxLines="1"
+        android:layout_centerVertical="true"
+        android:paddingBottom="@dimen/x10"
+        android:paddingEnd="@dimen/x10"
+        android:paddingStart="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:text="@string/home"
+        android:textColor="@color/app_font_black"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        app:typeface="@string/font_normal_dark" />
+</RelativeLayout>

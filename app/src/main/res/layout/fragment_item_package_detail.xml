@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/shape_top"
+            android:orientation="vertical">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="12 Months"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x22"
+                app:typeface="@string/font_bold"/>
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDuration"
+                android:layout_centerHorizontal="true"
+                android:text="Package"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/x20"
+                app:typeface="@string/font_normal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/x30"
+            android:layout_weight="0.7"
+            android:background="@drawable/shape_bottom">
+
+            <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+                android:id="@+id/rvFeatures"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+              android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/x50"
+                android:layout_marginStart="@dimen/x30"
+                android:layout_marginEnd="@dimen/x30"
+                android:layout_marginTop="@dimen/x50"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/x15"
+        android:background="@drawable/pricebox"
+        android:orientation="vertical">
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txtPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/x10"
+            android:text="AED 5000"
+            android:textColor="@color/app_font_dark_gray"
+            android:textSize="@dimen/x22"
+            app:typeface="@string/font_normal_dark"/>
+    </LinearLayout>
+</RelativeLayout>

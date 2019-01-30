@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+    <!--<android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="blocksDescendants"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">-->
+
+        <LinearLayout
+            android:id="@+id/ll_mainFrame"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/x40"
+            android:layout_marginTop="@dimen/x15"
+            android:background="@drawable/additional_parent_item_border"
+            android:orientation="horizontal">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_weight="0.4"
+                android:gravity="start"
+                android:paddingEnd="@dimen/x2"
+                android:paddingStart="@dimen/x10"
+
+                android:textColor="@color/app_font_black"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark"/>
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginEnd="@dimen/x10"
+                android:layout_weight="0.3"
+                android:gravity="start"
+                android:paddingEnd="@dimen/x2"
+                android:paddingStart="@dimen/x25"
+
+                android:textColor="@color/app_font_black"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark"/>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/chkStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:padding="@dimen/x8"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x20"
+                    android:button="@drawable/selector_checkbox"/>
+
+                <ImageView
+                    android:id="@+id/imgGroupIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:src="@drawable/downarrow_red"/>
+            </RelativeLayout>
+        </LinearLayout>
+   <!-- </android.support.v7.widget.CardView>-->
+</RelativeLayout>

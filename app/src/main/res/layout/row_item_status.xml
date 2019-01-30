@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/x20"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/delete_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:paddingLeft="@dimen/x20"
+        android:src="@drawable/tick" />
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txt_jobselectedtext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/x1"
+        android:layout_toEndOf="@id/delete_text"
+        android:maxLines="1"
+        android:paddingLeft="@dimen/x15"
+
+
+        android:text="Checked Air Conditioner"
+        android:textColor="@color/app_font_dark_gray"
+        android:textSize="@dimen/x14"
+        android:textStyle="normal"
+        app:typeface="@string/font_normal_dark" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginTop="@dimen/x30"
+        android:layout_below="@+id/txt_jobselectedtext"
+        android:background="@color/camera_color" />
+</RelativeLayout>

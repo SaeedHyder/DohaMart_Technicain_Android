@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "322636576100",
+    "firebase_url": "https://dohamart-1c03a.firebaseio.com",
+    "project_id": "dohamart-1c03a",
+    "storage_bucket": "dohamart-1c03a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:322636576100:android:259607c072c69998",
+        "android_client_info": {
+          "package_name": "com.ingic.ezhalbatek.technician"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "322636576100-5bc3tke35je95037heoepnlkstp7dlv9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTY3gkr-KKyS5HeYRCWVBbQLqvEgcT8I4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

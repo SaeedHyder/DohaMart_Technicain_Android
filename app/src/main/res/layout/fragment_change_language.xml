@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:paddingTop="@dimen/x20"
+              android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x10"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/eng"/>
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/btnEnglist"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="0.8"
+            android:text="@string/english"
+            android:textColor="@color/app_font_gray"
+            android:textSize="@dimen/x14"
+            app:typeface="@string/font_normal_dark"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginBottom="@dimen/x3"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:alpha="0.6"
+        android:background="@color/app_font_gray"/>
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/x10"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/arabic_rounded"/>
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/btnArabic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_weight="0.8"
+            android:text="@string/arabic"
+            android:textColor="@color/app_font_gray"
+            android:textSize="@dimen/x14"
+            app:typeface="@string/font_normal_dark"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x1"
+        android:layout_marginBottom="@dimen/x3"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:alpha="0.6"
+        android:background="@color/app_font_gray"/>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x60"
+        android:background="@drawable/bg2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/btnPendingJobs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/btnSubscriber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/subscriber_task"
+                android:textColor="@color/app_font_black"
+                app:typeface="@string/font_normal_dark"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="1"
+                android:background="@color/grey"/>
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="@dimen/x80"
+            android:alpha="1"
+            android:background="@color/grey"/>
+
+        <LinearLayout
+            android:id="@+id/btnCompleteJobs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/btnRegisted"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/normal_tasks"
+                android:textColor="@color/app_red"
+                app:typeface="@string/font_normal_dark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:alpha="1"
+                android:background="@color/grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_marginLeft="@dimen/x10"
+        android:layout_marginRight="@dimen/x10"
+        android:orientation="vertical"/>
+</LinearLayout>

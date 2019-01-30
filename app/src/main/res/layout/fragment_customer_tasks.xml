@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginTop="@dimen/x5"
+            app:cardCornerRadius="@dimen/x5"
+            app:cardElevation="3dp"
+            app:cardMaxElevation="5dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/x10">
+
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/x2"
+                    android:text="@string/search_customer"
+                    android:textColor="@color/app_red"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_normal_dark" />
+
+                <Spinner
+                    android:id="@+id/sp_category"
+                    style="@style/SpinnerTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x50"
+                    android:layout_marginTop="@dimen/x15"
+                    android:gravity="start|center_vertical"
+                    android:paddingEnd="@dimen/x10"
+                    android:paddingStart="@dimen/x10"
+                    android:textColor="@color/app_font_gray"
+                    android:textSize="@dimen/x14" />
+
+                <EditText
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x50"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/x15"
+                    android:background="@drawable/button_stroke_grey"
+                    android:gravity="start|center_vertical"
+                    android:hint="@string/search_by_customer_name_or_id"
+                    android:imeOptions="actionDone"
+                    android:inputType="textCapWords"
+                    android:textColorHint="@color/app_font_gray"
+                    android:maxLines="1"
+                    android:paddingEnd="@dimen/x10"
+                    android:paddingStart="@dimen/x10"
+                    android:textColor="@color/app_font_gray"
+                    android:textSize="@dimen/x14"
+                    android:visibility="visible"
+                    app:typeface="@string/font_normal_dark" />
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/x40"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/x15"
+                    android:background="@drawable/button_red"
+                    android:text="@string/search"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txtMonthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="@dimen/x17"
+            android:layout_marginTop="@dimen/x10"
+            android:gravity="center"
+            android:paddingEnd="@dimen/x2"
+            android:text="@string/customer_list_title"
+            android:textColor="@color/app_font_dark_gray"
+            android:textSize="@dimen/x14"
+            android:visibility="gone"
+            app:typeface="@string/font_normal_dark" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_no_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="No customer found"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/x15"
+            android:visibility="gone"
+            app:typeface="Roboto-Regular.ttf" />
+
+        <com.ingic.ezhalbatek.technician.ui.views.CustomRecyclerView
+            android:id="@+id/rvCustomers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:layout_marginRight="@dimen/x10"
+            android:layout_marginTop="@dimen/x10"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/x10">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="2dp"
+            app:cardMaxElevation="4dp"
+            app:cardPreventCornerOverlap="true"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:id="@+id/txtDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="@dimen/x10"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/x10"
+                    android:paddingStart="@dimen/x10"
+                    android:text="12 Months Package"
+                    android:textColor="@color/app_font_dark_gray"
+                    android:textSize="@dimen/x15"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:layout_marginTop="@dimen/x5"
+                    android:background="@color/app_font_dark_gray"/>
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingStart="@dimen/x10"
+                    android:text="@string/facilities"
+                    android:textColor="@color/app_red"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:id="@+id/txtFeatures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x10"
+                    android:layout_marginEnd="@dimen/x10"
+                    android:layout_marginStart="@dimen/x10"
+                    android:textSize="@dimen/x14"
+                    android:text="@string/lorem_ipsum"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/subscription_price"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtSubscriptionFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="AED 500"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_bold"/>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginBottom="@dimen/x5"
+                    android:layout_marginTop="@dimen/x5"
+                    android:background="@color/app_font_dark_gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/customer_name"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="Graham Bill"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/subscriber_id"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtSubscriberID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="01"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/address"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="Dubai Marina, Near Marina"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/phone_number"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="+971 xx xxxxxx"
+                        android:textColor="@color/app_blue"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/x20"
+                    android:layout_marginTop="@dimen/x5"
+                    android:orientation="horizontal">
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:paddingEnd="@dimen/x5"
+                        android:paddingStart="@dimen/x10"
+                        android:text="@string/customer_email"
+                        android:textColor="@color/app_red"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_normal_dark"/>
+
+                    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:gravity="center"
+                        android:text="graham@gmail.com"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/x14"
+                        app:typeface="@string/font_bold"/>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <Button
+            android:id="@+id/btnProceedPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="@dimen/x10"
+            android:background="@drawable/button_red"
+            android:text="@string/procedd_payment"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+</ScrollView>

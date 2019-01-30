@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/x5"
+        app:cardElevation="3dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/x10"
+                android:gravity="center"
+                android:paddingEnd="@dimen/x10"
+                android:paddingStart="@dimen/x10"
+                android:text="Monthly Maintenance"
+                android:textColor="@color/app_font_dark_gray"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="@dimen/x5"
+                android:layout_marginTop="@dimen/x5"
+                android:background="@color/app_font_dark_gray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x5"
+                android:orientation="horizontal">
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/x5"
+                    android:paddingStart="@dimen/x10"
+                    android:text="@string/subscriber_id"
+                    android:textColor="@color/app_red"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:id="@+id/txtSubscriberID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="01"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/x5"
+                android:orientation="horizontal">
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/x5"
+                    android:paddingStart="@dimen/x10"
+                    android:text="@string/subscription_package"
+                    android:textColor="@color/app_red"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:id="@+id/txtPackageType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="Gold Package"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_bold"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/x10"
+                android:layout_marginTop="@dimen/x5"
+                android:orientation="horizontal">
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:paddingEnd="@dimen/x5"
+                    android:paddingStart="@dimen/x10"
+                    android:text="@string/next_visit"
+                    android:textColor="@color/app_red"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_normal_dark"/>
+
+                <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                    android:id="@+id/txtVisitDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:gravity="center"
+                    android:text="11/2/2018"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/x14"
+                    app:typeface="@string/font_bold"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

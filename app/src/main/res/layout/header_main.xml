@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/header_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/x50"
+    android:background="@color/transparent">
+
+
+    <ImageView
+        android:id="@+id/btnLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+       android:paddingEnd="@dimen/x15"
+        android:paddingTop="@dimen/x15"
+        android:paddingBottom="@dimen/x15"
+        android:paddingStart="@dimen/x15"
+        android:scaleType="fitXY"
+        android:src="@drawable/nav"
+        android:visibility="visible" />
+
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txt_subHead"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:paddingStart="@dimen/x35"
+        android:paddingEnd="@dimen/x35"
+        android:gravity="center"
+        android:text="Home"
+        android:singleLine="true"
+        android:textColor="@color/app_font_dark_gray"
+        android:textSize="@dimen/x18"
+        app:typeface="@string/font_normal_dark" />
+
+    <ImageView
+        android:id="@+id/btnRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/x15"
+        android:layout_toStartOf="@+id/btnRight2"
+        android:paddingBottom="@dimen/x5"
+        android:paddingTop="@dimen/x5"
+        android:src="@drawable/notification"
+        android:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/btnRight2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/x10"
+        android:src="@drawable/notification"
+        android:padding="@dimen/x6"
+        android:visibility="visible"/>
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txt_delete_all"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="Delete All"
+        android:paddingEnd="@dimen/x15"
+        android:paddingStart="@dimen/x15"
+        android:textColor="@color/app_red"
+        android:textSize="@dimen/x14"
+        android:visibility="gone"
+        app:typeface="@string/font_normal_dark" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btnRight2"
+        android:layout_alignEnd="@+id/btnRight2"
+        android:layout_alignStart="@+id/btnRight2"
+        android:layout_alignTop="@+id/btnRight2">
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txtBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/badge_drawable"
+            android:gravity="center"
+            android:maxLength="2"
+            android:text="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x7"
+            app:typeface="@string/font_bold"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

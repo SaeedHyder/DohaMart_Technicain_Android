@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:orientation="vertical">
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txtAddedTask"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_toStartOf="@+id/txtPrice"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/x10"
+        android:paddingTop="@dimen/x10"
+        android:text="@string/selected_jobs"
+        android:textSize="@dimen/x15"
+        android:textStyle="normal"
+        app:typeface="@string/font_normal_dark"
+        />
+
+    <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+        android:id="@+id/txtPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="@dimen/x10"
+        android:layout_marginTop="@dimen/x10"
+        android:layout_toStartOf="@+id/imgDelete"
+        android:gravity="center"
+        android:paddingEnd="@dimen/x2"
+        android:text="AED 100"
+        android:textColor="@color/app_red"
+        android:textSize="@dimen/x14"
+        app:typeface="@string/font_normal_dark"/>
+
+    <ImageView
+        android:id="@+id/imgDelete"
+        android:layout_width="@dimen/x20"
+        android:layout_height="@dimen/x20"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/x15"
+        android:layout_marginStart="@dimen/x15"
+        android:src="@drawable/cross"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/txtAddedTask"
+        android:background="@color/app_font_gray"/>
+</RelativeLayout>

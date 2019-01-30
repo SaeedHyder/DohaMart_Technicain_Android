@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainframe"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_stroke_grey"
+        android:layout_marginTop="@dimen/x10"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/x15"
+            android:paddingBottom="@dimen/x15"
+            android:layout_weight="0.8">
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtCustomerNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:gravity="start"
+                android:paddingEnd="@dimen/x5"
+                android:paddingStart="@dimen/x10"
+                android:text="@string/technician_name_"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark" />
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtTechnicianName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:layout_below="@+id/txtCustomerNo"
+                android:paddingEnd="@dimen/x5"
+                android:paddingStart="@dimen/x10"
+                android:layout_marginTop="@dimen/x5"
+                android:gravity="start"
+                android:text="Subair"
+                android:textColor="@color/app_font_dark_gray"
+                android:textSize="@dimen/x14"
+                app:typeface="@string/font_normal_dark" />
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTechnicianName"
+                android:layout_gravity="start"
+                android:layout_marginTop="@dimen/x8"
+                android:gravity="start"
+                android:paddingEnd="@dimen/x5"
+                android:paddingStart="@dimen/x10"
+                android:text="@string/maintainence_date_"
+                android:textColor="@color/app_red"
+                android:textSize="@dimen/x15"
+                app:typeface="@string/font_normal_dark" />
+
+            <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtMaintenanceDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/txtDate"
+                android:layout_below="@+id/txtDate"
+                android:paddingEnd="@dimen/x5"
+                android:paddingStart="@dimen/x10"
+                android:layout_marginTop="@dimen/x5"
+                android:gravity="start"
+                android:text="23/12/17       07:00 PM to 09:00 PM"
+                android:textColor="@color/app_font_dark_gray"
+                android:textSize="@dimen/x14"
+                app:typeface="@string/font_normal_dark" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="@dimen/x1"
+            android:layout_height="match_parent"
+            android:background="@color/camera_color" />
+
+        <Button
+            android:id="@+id/btnViewReport"
+            android:layout_width="0dp"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/x10"
+            android:background="@drawable/button_red"
+            android:text="@string/view_report"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/x13"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+
+
+
