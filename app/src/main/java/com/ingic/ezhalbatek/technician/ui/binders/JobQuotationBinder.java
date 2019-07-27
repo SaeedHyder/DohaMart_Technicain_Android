@@ -34,7 +34,7 @@ public class JobQuotationBinder extends RecyclerViewBinder<TaskEnt> {
 
 
      /*   if (position==2){
-            holder.txtPrice.setText("AED 500.00");
+            holder.txtPrice.setText("QAR 500.00");
             holder.txtJobselectedtext.setText("Total");
             holder.txtPrice.setTypeface(Typeface.DEFAULT_BOLD);
             holder.txtJobselectedtext.setTextColor(context.getResources().getColor(R.color.app_font_black));

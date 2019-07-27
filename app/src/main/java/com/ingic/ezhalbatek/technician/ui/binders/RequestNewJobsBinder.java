@@ -76,7 +76,7 @@ public class RequestNewJobsBinder extends RecyclerViewBinder<UserPaymentEnt> imp
         }
 */
         holder.txtCustomerNoText.setText(entity.getUserDetail().getId()+"");
-        holder.txtDateTimeText.setText(DateHelper.dateFormat(entity.getDate(), "dd/MM/yy", "yyyy-MM-dd") + "  " + DateHelper.getLocalTime(entity.getDate()));
+        holder.txtDateTimeText.setText(DateHelper.dateFormat(entity.getDate(), "MMM dd,yyyy", "yyyy-MM-dd") + "  " + DateHelper.getLocalTime2(entity.getCreatedAt()));
 
 
      /*   switch (entity.getType()) {

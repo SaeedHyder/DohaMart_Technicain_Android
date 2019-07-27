@@ -176,14 +176,14 @@ public class AddDetailsFragment extends BaseFragment implements OnLongTap {
             txtSubscriptionID.setText(entity.getUser().getId() + "");
             txtCustomerName.setText(entity.getUser().getFullName() + "");
             txtSubscriptionPackage.setText(entity.getUser().getFullAddress() + "");
-            txtMobileNo.setText(entity.getUser().getPhoneNo() + "");
-            txtDate.setText(DateHelper.dateFormat(entity.getVisitDate(), "dd/MM/yy", "yyyy-MM-dd") + "");
+            txtMobileNo.setText(entity.getUser().getCountryCode()+entity.getUser().getPhoneNo() + "");
+            txtDate.setText(DateHelper.dateFormat(entity.getVisitDate(), "MMM dd,yyyy", "yyyy-MM-dd") + "");
         } else if (entityTask != null && entityTask.getUserDetail() != null) {
             txtSubscriptionID.setText(entityTask.getUserDetail().getId() + "");
             txtCustomerName.setText(entityTask.getUserDetail().getFullName() + "");
             txtSubscriptionPackage.setText(entityTask.getUserDetail().getFullAddress() + "");
             txtMobileNo.setText(entityTask.getUserDetail().getPhoneNo() + "");
-            txtDate.setText(DateHelper.dateFormat(entityTask.getDate(), "dd/MM/yy", "yyyy-MM-dd") + "");
+            txtDate.setText(DateHelper.dateFormat(entityTask.getDate(), "MMM dd,yyyy", "yyyy-MM-dd") + "");
         }
     }
 
@@ -277,7 +277,9 @@ public class AddDetailsFragment extends BaseFragment implements OnLongTap {
     private RecyclerItemListener itemClickListener = (ent, position, id) -> {
         switch (id) {
             case R.id.itemText:
-                getDockActivity().replaceDockableFragment(RoomDetailsFragment.newInstance((CreateRoomEnt) ent,((CreateRoomEnt)ent).getName()+""), RoomDetailsFragment.TAG);
+                getDockActivity().replaceDockableFragment(RoomAccessoryDetailFragment.newInstance((CreateRoomEnt) ent), RoomAccessoryDetailFragment.TAG);
+
+             //   getDockActivity().replaceDockableFragment(RoomDetailsFragment.newInstance((CreateRoomEnt) ent,((CreateRoomEnt)ent).getName()+""), RoomDetailsFragment.TAG);
                 break;
         }
     };

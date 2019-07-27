@@ -63,7 +63,7 @@
                     android:layout_gravity="start"
                     android:layout_marginTop="@dimen/x15"
                     android:background="@drawable/button_stroke_grey"
-                    android:gravity="start|center_vertical"
+                    android:gravity="center|center_vertical"
                     android:hint="@string/search_by_customer_name_or_id"
                     android:textColorHint="@color/app_font_gray"
                     android:imeOptions="actionDone"

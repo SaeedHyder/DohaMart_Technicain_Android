@@ -249,8 +249,8 @@ public class SubscriberJobDetailFragment extends BaseFragment implements OnLongT
         txtSubscriptionID.setText(entity.getUser().getId() + "");
         txtCustomerName.setText(entity.getUser().getFullName() + "");
         txtSubscriptionPackage.setText(entity.getUser().getFullAddress() + "");
-        txtMobileNo.setText(entity.getUser().getPhoneNo() + "");
-        txtDate.setText(DateHelper.dateFormat(entity.getCreatedAt(), "dd/MM/yy", "yyyy-MM-dd HH:mm:ss") + "");
+        txtMobileNo.setText(entity.getUser().getCountryCode()+entity.getUser().getPhoneNo() + "");
+        txtDate.setText(DateHelper.dateFormat(entity.getCreatedAt(), "MMM dd,yyyy", "yyyy-MM-dd HH:mm:ss") + "");
     }
 
 

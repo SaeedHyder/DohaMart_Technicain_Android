@@ -167,6 +167,8 @@
     <string name="addtional_job_description">Write your additional job\'s description here…</string>
     <string name="location_dummy">Enter Your Location Here</string>
     <string name="select_date">Select Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
     <string name="preferred_time">Select Time</string>
     <string name="select_time">Select Time</string>
     <string name="payment_option_value">Payment will made in cash upon service delivery</string>
@@ -217,6 +219,7 @@
     <string name="call_technician">Call Technician</string>
     <string name="job_title_head">Job Title :</string>
     <string name="jobs">Jobs :</string>
+    <string name="new_jobs_1">New Jobs :</string>
     <string name="additional_note">Additional Note :</string>
     <string name="cancel_Job">Cancel Job</string>
     <string name="yes">Yes</string>
@@ -290,7 +293,7 @@
     <string name="accessory_type">Type :</string>
     <string name="accessory_model">Model :</string>
     <string name="accessory_quantity">Quantity :</string>
-    <string name="aed">AED</string>
+    <string name="qar">QAR</string>
     <string name="price">Price</string>
     <string name="task">Task</string>
     <string name="addtional_task">Additional Job</string>
@@ -358,5 +361,8 @@
     <string name="visit_date">Visit Date : </string>
     <string name="no_additional_item_assigned">No additional item assigned</string>
     <string name="room_text_error">Enter room name to proceed.</string>
+    <string name="qty">Qty</string>
+    <string name="additional_cost_1">Additional Cost:</string>
+    <string name="checked">Checked</string>
 
 </resources>

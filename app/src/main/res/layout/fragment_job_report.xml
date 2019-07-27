@@ -151,7 +151,7 @@
                         android:layout_gravity="start"
                         android:gravity="center"
                         android:paddingStart="@dimen/x10"
-                        android:text="@string/jobs"
+                        android:text="@string/new_jobs_1"
                         android:textColor="@color/app_red"
                         android:textSize="@dimen/x14"
                         app:typeface="@string/font_normal_dark" />
@@ -233,6 +233,7 @@
                     android:gravity="center"
                     android:paddingTop="@dimen/x3"
                     android:paddingBottom="@dimen/x6"
+                    android:visibility="gone"
                     android:orientation="horizontal">
 
                     <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
@@ -263,6 +264,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="0.5dp"
                     android:layout_marginBottom="@dimen/x5"
+                    android:layout_marginTop="@dimen/x5"
 
                     android:background="@color/camera_color" />
 
@@ -364,7 +366,7 @@
                     android:orientation="horizontal">
 
                     <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
-
+                        android:id="@+id/txtTitleCost"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"

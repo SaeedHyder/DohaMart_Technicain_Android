@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.View;
 
 import com.ingic.ezhalbatek.technician.R;
-import com.ingic.ezhalbatek.technician.entities.AdditionalJob;
 import com.ingic.ezhalbatek.technician.entities.ServicsList;
 import com.ingic.ezhalbatek.technician.ui.viewbinders.abstracts.RecyclerViewBinder;
 import com.ingic.ezhalbatek.technician.ui.views.AnyTextView;
@@ -17,7 +16,7 @@ public class ServicesListBinder extends RecyclerViewBinder<ServicsList> {
     private Double amount;
 
     public ServicesListBinder() {
-        super(R.layout.row_item_addtional_job);
+        super(R.layout.row_item_service_job);
     }
 
     @Override
@@ -29,11 +28,13 @@ public class ServicesListBinder extends RecyclerViewBinder<ServicsList> {
     public void bindView(ServicsList entity, int position, Object viewHolder, Context context) {
         ViewHolder holder = (ViewHolder) viewHolder;
 
-        holder.txtQuantity.setVisibility(View.GONE);
         holder.txtJobselectedtext.setText(entity.getServiceDetail().getTitle()+ "");
-        amount = 0.0;
+        holder.txtQuantity.setText(context.getResources().getString(R.string.qty)+": " + entity.getQuantity() + "");
+
+        holder.txtJobselectedAmount.setVisibility(View.GONE);
+       /* amount = 0.0;
         amount = Double.valueOf(entity.getServiceDetail().getAmount());
-        holder.txtJobselectedAmount.setText("AED " + amount + "");
+        holder.txtJobselectedAmount.setText(context.getResources().getString(R.string.qar)+" " + amount + "");*/
     }
 
 

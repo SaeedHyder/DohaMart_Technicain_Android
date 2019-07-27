@@ -58,6 +58,8 @@ public class RecieptPaymentFragment extends BaseFragment {
     LinearLayout btnCompleteJobs;
     @BindView(R.id.btnDate)
     TextView btnDate;
+    @BindView(R.id.btnEndDate)
+    TextView btnEndDate;
     @BindView(R.id.sp_sucscription)
     Spinner spSucscription;
     @BindView(R.id.btnSearch)
@@ -67,6 +69,7 @@ public class RecieptPaymentFragment extends BaseFragment {
     Unbinder unbinder;
 
     private Date DateSelected;
+    private Date EndDateSelected;
     private AppInterfaces.DateFilterListener dateFilterListener;
     private AppInterfaces.SearchInterface searchInterface;
     private SubscriberTaskFragment subscriberTaskFragment;
@@ -239,8 +242,49 @@ public class RecieptPaymentFragment extends BaseFragment {
         datePickerHelper.showDate();
     }
 
+    private void initEndDatePicker(final TextView textView) {
+        Calendar calendar = Calendar.getInstance();
+        final DatePickerHelper datePickerHelper = new DatePickerHelper();
+        datePickerHelper.initDateDialog(
+                getDockActivity(),
+                calendar.get(Calendar.YEAR),
+                calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH)
+                , new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        Date date = new Date();
+                        Calendar c = Calendar.getInstance();
+                        c.set(Calendar.YEAR, year);
+                        c.set(Calendar.MONTH, month);
+                        c.set(Calendar.DAY_OF_MONTH, dayOfMonth);
 
-    @OnClick({R.id.txtPendingText, R.id.txtCompleteText, R.id.btnDate, R.id.btnSearch})
+// and get that as a Date
+                        Date dateSpecified = c.getTime();
+                       /* if (dateSpecified.before(date)) {
+                            UIHelper.showShortToastInCenter(getDockActivity(), getString(R.string.date_before_error));
+                        } else */
+                        {
+                            EndDateSelected = dateSpecified;
+                            if (dateFilterListener != null) {
+                                dateFilterListener.onDateFilterChange(dateSpecified);
+                            }
+                            if (prefHelper.isLanguageArabic())
+                                textView.setText(new SimpleDateFormat("yyyy-MM-dd", new Locale("ar")).format(c.getTime()));
+                            else
+                                textView.setText(new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(c.getTime()));
+                            String predate = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(c.getTime());
+
+                        }
+
+                    }
+                }, "PreferredDate");
+        // datePickerHelper.setMaximumDate(new Date().getTime());
+        datePickerHelper.showDate();
+    }
+
+
+    @OnClick({R.id.txtPendingText, R.id.txtCompleteText, R.id.btnDate,R.id.btnEndDate, R.id.btnSearch})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.txtPendingText:
@@ -251,6 +295,9 @@ public class RecieptPaymentFragment extends BaseFragment {
                 break;
             case R.id.btnDate:
                 initDatePicker(btnDate);
+                break;
+            case R.id.btnEndDate:
+                initEndDatePicker(btnEndDate);
                 break;
             case R.id.btnSearch:
                 if (searchInterface != null) {
@@ -264,7 +311,7 @@ public class RecieptPaymentFragment extends BaseFragment {
                         categoryId = allCategoriesCollection.get(spSucscription.getSelectedItemPosition()).getId();
 
                     }
-                    searchInterface.onSearchClick(DateSelected, subscriptionId, categoryId);
+                    searchInterface.onSearchClick(DateSelected,EndDateSelected, subscriptionId, categoryId);
                 }
                 break;
         }

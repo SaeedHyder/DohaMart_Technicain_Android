@@ -83,7 +83,7 @@ public class SubscriberJobsBinder extends RecyclerViewBinder<SubscriptionPayment
         }*/
 
         holder.txtCustomerNoText.setText(entity.getUser().getId() + "");
-        holder.txtDateTimeText.setText(DateHelper.dateFormat(entity.getVisitDate(), "dd/MM/yy", "yyyy-MM-dd") + "  " + entity.getStartTime() + " to " + entity.getEndTime());
+        holder.txtDateTimeText.setText(DateHelper.dateFormat(entity.getVisitDate(), "MMM dd,yyyy", "yyyy-MM-dd") + "  " + entity.getStartTime() + " to " + entity.getEndTime());
 
 
        /* switch (entity.getType()) {

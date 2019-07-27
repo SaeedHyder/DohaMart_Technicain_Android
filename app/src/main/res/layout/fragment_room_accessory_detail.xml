@@ -47,6 +47,7 @@
                 app:typeface="@string/font_normal_dark" />
 
             <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+                android:id="@+id/txtStatus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="start"

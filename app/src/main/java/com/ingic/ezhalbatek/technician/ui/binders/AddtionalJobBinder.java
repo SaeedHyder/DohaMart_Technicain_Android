@@ -18,7 +18,7 @@ public class AddtionalJobBinder extends RecyclerViewBinder<AdditionalJob> {
     private Double amount;
 
     public AddtionalJobBinder() {
-        super(R.layout.row_item_addtional_job);
+        super(R.layout.row_item_additional_job);
     }
 
     @Override
@@ -31,10 +31,10 @@ public class AddtionalJobBinder extends RecyclerViewBinder<AdditionalJob> {
         ViewHolder holder = (ViewHolder) viewHolder;
 
         holder.txtJobselectedtext.setText(entity.getItem().getName() + "");
-        holder.txtQuantity.setText("Qty " + entity.getQuantity() + "");
+        holder.txtQuantity.setText(entity.getQuantity() + "");
         amount=0.0;
         amount = Double.valueOf(entity.getItem().getAmount());
-        holder.txtJobselectedAmount.setText("AED " + amount + "");
+        holder.txtJobselectedAmount.setText(context.getResources().getString(R.string.qar)+" " + amount + "");
     }
 
 

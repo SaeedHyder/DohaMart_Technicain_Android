@@ -95,10 +95,12 @@ public class AdditionalTaskChildBinder extends RecyclerViewBinder<Items> {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
 
-                if (isChecked) {
-                    mainActivity.getAdditionalJobsHash().put(entity.getId() + "", new HashMapEnt(entity.getName(), quanitityList.get(holder.spQuantity.getSelectedItemPosition()), isChecked));
-                } else {
-                    mainActivity.getAdditionalJobsHash().remove(entity.getId() + "");
+                if (quanitityList != null && quanitityList.size() > 0) {
+                    if (isChecked) {
+                        mainActivity.getAdditionalJobsHash().put(entity.getId() + "", new HashMapEnt(entity.getName(), quanitityList.get(holder.spQuantity.getSelectedItemPosition()), isChecked));
+                    } else {
+                        mainActivity.getAdditionalJobsHash().remove(entity.getId() + "");
+                    }
                 }
 
             }

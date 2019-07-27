@@ -38,7 +38,8 @@ public class TechnicianVisitDetailsBinder extends RecyclerViewBinder<UserVisit> 
 
 
         holder.txtTechnicianName.setText(entity.getTechnician().getFullName()!=null?entity.getTechnician().getFullName():"-");
-        holder.txtMaintenanceDate.setText(DateHelper.dateFormat(entity.getVisitDate(), "dd/MM/yy", "yyyy-MM-dd") + "  " + entity.getStartTime() + " to " + entity.getEndTime());
+        holder.txtMaintenanceDate.setText(DateHelper.dateFormat(entity.getVisitDate(), "MMM dd,yyyy", "yyyy-MM-dd"));
+      //  holder.txtMaintenanceDate.setText(DateHelper.dateFormat(entity.getVisitDate(), "dd/MM/yy", "yyyy-MM-dd") + "  " + entity.getStartTime() + " to " + entity.getEndTime());
 
 
         holder.btnViewReport.setOnClickListener(view -> {

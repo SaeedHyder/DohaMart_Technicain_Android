@@ -163,11 +163,11 @@ public class TaskDetailFragment extends BaseFragment {
                 llAdditionalJobs.setVisibility(View.GONE);
             }
 
-            txtTotalEarning.setText("AED " + amount);
+            txtTotalEarning.setText(getDockActivity().getResources().getString(R.string.qar) + " " + amount);
 
         } else if (userDataEntity != null) {
 
-            llExtraCost.setVisibility(View.VISIBLE);
+            llExtraCost.setVisibility(View.GONE);
             requestTitle.setText(R.string.request_title);
             requestId.setText(R.string.request_id);
 
@@ -176,15 +176,15 @@ public class TaskDetailFragment extends BaseFragment {
             txtSubscriptionPackage.setText(userDataEntity.getJobTitle());
 
             double totalAmount = userDataEntity.getTotalAmount() + userDataEntity.getUrgentCost();
-            txtTotalEarning.setText("AED" + " " + totalAmount + "");
-            txtExtraEarning.setText(userDataEntity.getUrgentCost() != null ? "AED" + " " + userDataEntity.getUrgentCost() + "" : "-");
+            txtTotalEarning.setText(getDockActivity().getResources().getString(R.string.qar) + " " + totalAmount + "");
+            txtExtraEarning.setText(userDataEntity.getUrgentCost() != null ? getDockActivity().getResources().getString(R.string.qar) + " " + String.format("%.2f", userDataEntity.getUrgentCost()) + "" : "-");
 
             for (ServicsList item : userDataEntity.getServicsList()) {
                 servicesCollection.add(item);
             }
 
             //  currencyCode=userDataEntity.getAdditionalJobs().get(0).getCurrencyCode();
-            currencyCode = "AED";
+            currencyCode = "QAR";
             for (AdditionalJob item : userDataEntity.getAdditionalJobs()) {
                 if (item.getStatus() == 2) {
                     addedJobCollection.add(item);
@@ -200,9 +200,11 @@ public class TaskDetailFragment extends BaseFragment {
             }
         }
 
-        rvAddtionalJobs.bindRecyclerView(new AddtionalJobBinder(), addedJobCollection, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
-        rvServiceJobs.bindRecyclerView(new ServicesListBinder(), servicesCollection, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
+        if (addedJobCollection != null && addedJobCollection.size() > 0)
+            rvAddtionalJobs.bindRecyclerView(new AddtionalJobBinder(), addedJobCollection, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
 
+        if (servicesCollection != null && servicesCollection.size() > 0)
+            rvServiceJobs.bindRecyclerView(new ServicesListBinder(), servicesCollection, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
 
 
         // txtTotalEarning.setText(currencyCode + " " + amount + "");

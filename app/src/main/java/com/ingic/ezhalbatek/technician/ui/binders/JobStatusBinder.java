@@ -28,7 +28,7 @@ public class JobStatusBinder extends RecyclerViewBinder<String> {
     public void bindView(String entity, int position, Object viewHolder, Context context) {
         ViewHolder holder = (ViewHolder) viewHolder;
 
-        holder.txtJobselectedtext.setText(entity+"");
+        holder.txtJobselectedtext.setText(context.getResources().getString(R.string.checked)+" "+entity+"");
 
 
     }

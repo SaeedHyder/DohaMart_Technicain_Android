@@ -121,12 +121,12 @@ public class RegisteredUserTaskHistory extends BaseFragment implements AppInterf
     }
 
     @Override
-    public void onSearchClick(Date date, int subscriptionId, int categoryId) {
+    public void onSearchClick(Date date,Date EndDate, int subscriptionId, int categoryId) {
 
         if (categoryId != 0) {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), categoryId+""), UserTaskHistory);
+                serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(EndDate), categoryId+""), UserTaskHistory);
             } else {
                 serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(),null,null, categoryId+""), UserTaskHistory);
             }
@@ -135,7 +135,7 @@ public class RegisteredUserTaskHistory extends BaseFragment implements AppInterf
             //UIHelper.showShortToastInCenter(getDockActivity(), "Please select category");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), null), UserTaskHistory);
+                serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(EndDate), null), UserTaskHistory);
             } else {
                 serviceHelper.enqueueCall(webService.userTaskHistory(prefHelper.getUser().getId(),null,null, null), UserTaskHistory);
             }

@@ -93,7 +93,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="start"
                         android:gravity="center"
-                        android:text="AED 500"
+                        android:text="QAR 500"
                         android:textColor="@color/black"
                         android:textSize="@dimen/x14"
                         app:typeface="@string/font_bold"/>

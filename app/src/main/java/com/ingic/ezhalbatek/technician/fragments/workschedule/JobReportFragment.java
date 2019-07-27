@@ -74,6 +74,8 @@ public class JobReportFragment extends BaseFragment {
     AnyTextView txtStatus;
     @BindView(R.id.txtExtraEarning)
     AnyTextView txtExtraEarning;
+    @BindView(R.id.txtTitleCost)
+    AnyTextView txtTitleCost;
     @BindView(R.id.ll_extra_cost)
     LinearLayout llExtraCost;
     @BindView(R.id.rvJobs)
@@ -206,6 +208,7 @@ public class JobReportFragment extends BaseFragment {
         }
         if (jobs.size() > 0) {
             llAdditionalJob.setVisibility(View.VISIBLE);
+            viewTotal.setVisibility(View.VISIBLE);
             rvAddtionalJobs.bindRecyclerView(new AddtionalJobBinder(), jobs, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
 
         } else {
@@ -215,6 +218,7 @@ public class JobReportFragment extends BaseFragment {
         }
 
         if (servicesCollection.size() > 0) {
+            viewTotal.setVisibility(View.VISIBLE);
             rvJobs.bindRecyclerView(new ServicesListBinder(), servicesCollection, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
         } else {
             llJob.setVisibility(View.GONE);
@@ -237,21 +241,21 @@ public class JobReportFragment extends BaseFragment {
 
     private void setRequestViewsData(UserPaymentEnt userEntity) {
 
-        llExtraCost.setVisibility(View.VISIBLE);
+        llExtraCost.setVisibility(View.GONE);
         txtDate.setText(userEntity.getJobTitle() + "");
         txtVisitDate.setText(getDockActivity().getResources().getString(R.string.task_title));
         txtDuration.setText(DateHelper.dateFormat(userEntity.getDate(), "MMMM yyyy", "yyyy-MM-dd"));
         txtServiceID.setText(DateHelper.dateFormat(userEntity.getDate(), "dd MMM,yyyy", "yyyy-MM-dd"));
         txtTechnicianName.setText(userEntity.getUserDetail().getFullAddress() + "");
         txtTechnicianNumber.setText(userEntity.getUserDetail().getFullName() + "");
-        txtCustomerNo.setText(userEntity.getUserDetail().getPhoneNo() + "");
-        //  txtCost.setText("AED " + amount + "");
-        //  txtTotalEarning.setText("AED" + " " + amount + "");
+        txtCustomerNo.setText(userEntity.getUserDetail().getId() + "");
+        //  txtCost.setText("QAR " + amount + "");
+        //  txtTotalEarning.setText("QAR" + " " + amount + "");
 
         double totalAmount = userEntity.getTotalAmount() + userEntity.getUrgentCost();
-        txtTotalEarning.setText("AED" + " " + totalAmount + "");
-        txtCost.setText("AED " + totalAmount + "");
-        txtExtraEarning.setText(userEntity.getUrgentCost() != null ? "AED" + " " + userEntity.getUrgentCost() + "" : "-");
+        txtTotalEarning.setText(getDockActivity().getResources().getString(R.string.qar)+" " + totalAmount + "");
+        txtCost.setText(getDockActivity().getResources().getString(R.string.qar)+" " + totalAmount + "");
+        txtExtraEarning.setText(userEntity.getUrgentCost() != null ? getDockActivity().getResources().getString(R.string.qar)+" " + userEntity.getUrgentCost() + "" : "-");
 
         if (userEntity.getFeedback() != null) {
             rbRating.setScore(Float.parseFloat(userEntity.getFeedback().getRate()));
@@ -279,6 +283,7 @@ public class JobReportFragment extends BaseFragment {
 
         if (jobs.size() > 0) {
             llAdditionalJob.setVisibility(View.VISIBLE);
+            viewTotal.setVisibility(View.VISIBLE);
             rvAddtionalJobs.bindRecyclerView(new AddtionalJobBinder(), jobs, new LinearLayoutManager(getDockActivity(), LinearLayoutManager.VERTICAL, false), new DefaultItemAnimator());
 
         } else {
@@ -306,9 +311,10 @@ public class JobReportFragment extends BaseFragment {
         txtServiceID.setText(DateHelper.dateFormat(entity.getVisitDate(), "dd MMM,yyyy", "yyyy-MM-dd"));
         txtTechnicianName.setText(entity.getUser().getFullAddress() + "");
         txtTechnicianNumber.setText(entity.getUser().getFullName() + "");
-        txtCustomerNo.setText(entity.getUser().getPhoneNo() + "");
-        txtCost.setText("AED " + amount + "");
-        txtTotalEarning.setText("AED" + " " + amount + "");
+        txtCustomerNo.setText(entity.getUser().getId() + "");
+        txtTitleCost.setText(getResString(R.string.additional_cost_1));
+        txtCost.setText(getDockActivity().getResources().getString(R.string.qar)+" " + amount + "");
+        txtTotalEarning.setText(getDockActivity().getResources().getString(R.string.qar)+" "+ amount + "");
         if (entity.getFeedback() != null) {
             rbRating.setScore(Float.parseFloat(entity.getFeedback().getRate()));
         } else {

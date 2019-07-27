@@ -76,7 +76,7 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:padding="@dimen/x10"
-            android:text="AED 5000"
+            android:text="QAR 5000"
             android:textColor="@color/app_font_dark_gray"
             android:textSize="@dimen/x22"
             app:typeface="@string/font_normal_dark"/>

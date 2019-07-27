@@ -117,11 +117,11 @@ public class SubscriberTaskFragment extends BaseFragment implements AppInterface
     });
 
     @Override
-    public void onSearchClick(Date date, int subscriptionId, int categoryId) {
+    public void onSearchClick(Date date,Date endDate, int subscriptionId, int categoryId) {
         if (subscriptionId != 0) {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), subscriptionId + ""), SubscriptionPayment);
+                serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(endDate), subscriptionId + ""), SubscriptionPayment);
             } else {
                 serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), null, null, subscriptionId + ""), SubscriptionPayment);
             }
@@ -129,7 +129,7 @@ public class SubscriberTaskFragment extends BaseFragment implements AppInterface
             //    UIHelper.showShortToastInCenter(getDockActivity(), "Please select subscription");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), null), SubscriptionPayment);
+                serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(endDate), null), SubscriptionPayment);
             } else {
                 serviceHelper.enqueueCall(webService.subscriptionPayment(prefHelper.getUser().getId(), null, null, null), SubscriptionPayment);
             }

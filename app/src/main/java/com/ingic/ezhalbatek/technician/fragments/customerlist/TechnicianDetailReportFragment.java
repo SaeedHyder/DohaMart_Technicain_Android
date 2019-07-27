@@ -59,7 +59,7 @@ public class TechnicianDetailReportFragment extends BaseFragment {
     @BindView(R.id.ll_jobs)
     LinearLayout llJobs;
 
-    private ArrayList<String> addedJobCollection;
+    private ArrayList<AdditionalJob> addedJobCollection;
     private static String suscriberKey = "suscriberKey";
     private String suscriberJsonString;
     private static String userKey = "userKey";
@@ -146,7 +146,8 @@ public class TechnicianDetailReportFragment extends BaseFragment {
             txtCustomerName.setText(SubUserName != null ? SubUserName : "-");
             txtSubscriptionPackage.setText(SubTitle != null ? SubTitle : "-");
             txtDate.setText(DateHelper.dateFormat(subscriptionEntity.getVisitDate(), "MMMM yyyy", "yyyy-MM-dd"));
-            txtTime.setText(DateHelper.dateFormat(subscriptionEntity.getVisitDate(), "hh:mm a", "yyyy-MM-dd"));
+            txtTime.setText(subscriptionEntity.getStartTime());
+           // txtTime.setText(DateHelper.dateFormat(subscriptionEntity.getVisitDate(), "hh:mm a", "yyyy-MM-dd"));
 
             if (subscriptionEntity.getAdditionalJobs().size() > 0) {
                 llAdditionalJobs.setVisibility(View.VISIBLE);
@@ -154,7 +155,7 @@ public class TechnicianDetailReportFragment extends BaseFragment {
 
                 for (AdditionalJob item : subscriptionEntity.getAdditionalJobs()) {
                     if (item.getStatus() == 2) {
-                        addedJobCollection.add(item.getItem().getName() + "");
+                        addedJobCollection.add(item);
                     }
                 }
 
@@ -171,7 +172,7 @@ public class TechnicianDetailReportFragment extends BaseFragment {
             servicesCollection=new ArrayList<>();
             txtCustomerName.setText(TaskUserName != null ? TaskUserName : "-");
             txtDate.setText(DateHelper.dateFormat(userDataEntity.getDate(), "MMMM yyyy", "yyyy-MM-dd"));
-            txtTime.setText(DateHelper.dateFormat(userDataEntity.getDate(), "hh:mm a", "yyyy-MM-dd"));
+            txtTime.setText(DateHelper.dateFormat(userDataEntity.getCreatedAt(), "hh:mm a", "yyyy-MM-dd hh:mm:ss"));
             txtSubscriptionPackage.setText(R.string.task_title);
 
             if (userDataEntity.getAdditionalJobs().size() > 0) {
@@ -180,7 +181,7 @@ public class TechnicianDetailReportFragment extends BaseFragment {
 
                 for (AdditionalJob item : userDataEntity.getAdditionalJobs()) {
                     if (item.getStatus() == 2) {
-                        addedJobCollection.add(item.getItem().getName() + "");
+                        addedJobCollection.add(item);
                     }
                 }
             }

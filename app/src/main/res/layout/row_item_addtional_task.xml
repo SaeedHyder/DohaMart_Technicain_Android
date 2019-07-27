@@ -31,7 +31,7 @@
         android:layout_toStartOf="@+id/imgDelete"
         android:gravity="center"
         android:paddingEnd="@dimen/x2"
-        android:text="AED 100"
+        android:text="QAR 100"
         android:textColor="@color/app_red"
         android:textSize="@dimen/x14"
         app:typeface="@string/font_normal_dark"/>

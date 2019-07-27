@@ -25,9 +25,20 @@ public class ServicsList {
     @SerializedName("updated_at")
     @Expose
     private String updatedAt;
+    @SerializedName("quantity")
+    @Expose
+    private String quantity;
     @SerializedName("service_detail")
     @Expose
     private ServiceDetail serviceDetail;
+
+    public String getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(String quantity) {
+        this.quantity = quantity;
+    }
 
     private boolean isChecked=false;
 

@@ -13,9 +13,22 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/x10"
         android:layout_marginStart="@dimen/x10"
-        android:layout_marginTop="@dimen/x5"
+        android:layout_marginTop="@dimen/x6"
+        android:layout_marginBottom="@dimen/x3"
         android:gravity="center_vertical"
         android:orientation="horizontal">
+
+        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
+            android:id="@+id/txt_Quantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/x10"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="2"
+            android:textSize="@dimen/x15"
+            android:textStyle="normal"
+            app:typeface="@string/font_normal_dark" />
 
         <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
             android:id="@+id/txt_jobselectedtext"
@@ -30,44 +43,25 @@
             android:textStyle="normal"
             app:typeface="@string/font_normal_dark" />
 
-        <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
-            android:id="@+id/txt_Quantity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/x10"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:maxLines="1"
 
-
-            android:text="Qty 2"
-            android:textSize="@dimen/x15"
-            android:textStyle="normal"
-            app:typeface="@string/font_normal_dark" />
 
         <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
             android:id="@+id/txt_jobselectedAmount"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/x10"
-            android:layout_weight="1"
             android:gravity="right"
             android:maxLines="1"
-            android:text="AED 500"
+            android:text="QAR 500"
             android:textSize="@dimen/x15"
             android:textStyle="normal"
+            android:visibility="visible"
+            android:textColor="@color/app_red"
             app:typeface="@string/font_normal_dark" />
 
     </LinearLayout>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/x1"
-        android:layout_below="@+id/ll_item"
-        android:layout_marginTop="@dimen/x5"
-        android:layout_marginBottom="@dimen/x3"
-        android:alpha="0.5"
-        android:background="@color/camera_color"/>
+
 
 
 </RelativeLayout>

@@ -116,12 +116,12 @@ public class RegisteredUserTaskFragment extends BaseFragment implements AppInter
 
 
     @Override
-    public void onSearchClick(Date date, int subscriptionId, int categoryId) {
+    public void onSearchClick(Date date, Date endDateSelected, int subscriptionId, int categoryId) {
 
         if (categoryId != 0) {
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), categoryId+""), UserPayment);
+                serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(endDateSelected), categoryId+""), UserPayment);
             } else {
                 serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(),null,null, categoryId+""), UserPayment);
             }
@@ -129,11 +129,13 @@ public class RegisteredUserTaskFragment extends BaseFragment implements AppInter
            // UIHelper.showShortToastInCenter(getDockActivity(), "Please select category");
             SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd", Locale.US);
             if (date != null) {
-                serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(date), null), UserPayment);
+                serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(), dateFormat.format(date), dateFormat.format(endDateSelected), null), UserPayment);
             } else {
                 serviceHelper.enqueueCall(webService.userPayment(prefHelper.getUser().getId(),null,null, null), UserPayment);
             }
         }
 
     }
+
+
 }

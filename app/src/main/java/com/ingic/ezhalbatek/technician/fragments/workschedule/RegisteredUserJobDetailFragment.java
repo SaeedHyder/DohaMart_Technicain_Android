@@ -24,6 +24,7 @@ import com.ingic.ezhalbatek.technician.entities.TaskEnt;
 import com.ingic.ezhalbatek.technician.entities.UserPaymentEnt;
 import com.ingic.ezhalbatek.technician.fragments.abstracts.BaseFragment;
 import com.ingic.ezhalbatek.technician.global.AppConstants;
+import com.ingic.ezhalbatek.technician.helpers.DateHelper;
 import com.ingic.ezhalbatek.technician.helpers.DialogHelper;
 import com.ingic.ezhalbatek.technician.helpers.UIHelper;
 import com.ingic.ezhalbatek.technician.interfaces.RecyclerItemListener;
@@ -79,6 +80,17 @@ public class RegisteredUserJobDetailFragment extends BaseFragment {
     Button btnAdditionalTask;
     @BindView(R.id.mainFrame)
     LinearLayout mainFrame;
+
+    @BindView(R.id.txtSubscriptionID)
+    AnyTextView txtSubscriptionID;
+    @BindView(R.id.txtCustomerName)
+    AnyTextView txtCustomerName;
+    @BindView(R.id.txtSubscriptionPackage)
+    AnyTextView txtSubscriptionPackage;
+    @BindView(R.id.txtMobileNo)
+    AnyTextView txtMobileNo;
+    @BindView(R.id.txtDate)
+    AnyTextView txtDate;
 
 
     private ArrayList<ServicsList> jobsCollection;
@@ -147,6 +159,7 @@ public class RegisteredUserJobDetailFragment extends BaseFragment {
             case GetRequestData:
                 UserPaymentEnt response = (UserPaymentEnt) result;
                 mainFrame.setVisibility(View.VISIBLE);
+                setData(response);
                 entity = response;
                 jobsCollection = new ArrayList<>();
                 jobsCollection.addAll(response.getServicsList());
@@ -156,6 +169,14 @@ public class RegisteredUserJobDetailFragment extends BaseFragment {
                 break;
 
         }
+    }
+
+    private void setData(UserPaymentEnt entityTask) {
+        txtSubscriptionID.setText(entityTask.getUserDetail().getId() + "");
+        txtCustomerName.setText(entityTask.getUserDetail().getFullName() + "");
+        txtSubscriptionPackage.setText(entityTask.getUserDetail().getFullAddress() + "");
+        txtMobileNo.setText(entityTask.getUserDetail().getPhoneNo() + "");
+        txtDate.setText(DateHelper.dateFormat(entityTask.getDate(), "MMM dd,yyyy", "yyyy-MM-dd") + "");
     }
 
     private boolean checkAdditionalJobs(UserPaymentEnt entity) {
@@ -193,6 +214,7 @@ public class RegisteredUserJobDetailFragment extends BaseFragment {
                 }
                 break;
             case R.id.btnViewAccessories:
+
                 getDockActivity().replaceDockableFragment(AddDetailsFragment.newInstance(entity), AddDetailsFragment.TAG);
                 break;
             case R.id.btnAdditionalTask:

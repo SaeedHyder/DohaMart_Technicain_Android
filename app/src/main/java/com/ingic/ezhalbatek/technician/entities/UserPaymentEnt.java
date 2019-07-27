@@ -98,7 +98,7 @@ public class UserPaymentEnt {
     private Integer totalAmount;
     @SerializedName("urgent_cost")
     @Expose
-    private Integer urgentCost;
+    private Double urgentCost;
 
     public Integer getTotalAmount() {
         return totalAmount;
@@ -108,11 +108,11 @@ public class UserPaymentEnt {
         this.totalAmount = totalAmount;
     }
 
-    public Integer getUrgentCost() {
+    public Double getUrgentCost() {
         return urgentCost;
     }
 
-    public void setUrgentCost(Integer urgentCost) {
+    public void setUrgentCost(Double urgentCost) {
         this.urgentCost = urgentCost;
     }
 

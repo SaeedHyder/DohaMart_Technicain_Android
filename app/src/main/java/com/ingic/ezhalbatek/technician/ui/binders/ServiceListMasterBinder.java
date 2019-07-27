@@ -30,12 +30,15 @@ public class ServiceListMasterBinder extends RecyclerViewBinder<ServicsList> {
 
 
         holder.txtTaskDetail.setText(entity.getServiceDetail().getTitle() + "");
+        holder.txtQuantity.setText(context.getResources().getString(R.string.qty)+" "+entity.getQuantity()+"");
     }
 
 
     static class ViewHolder extends BaseViewHolder {
         @BindView(R.id.txtTaskDetail)
         AnyTextView txtTaskDetail;
+        @BindView(R.id.txt_Quantity)
+        AnyTextView txtQuantity;
 
         ViewHolder(View view) {
             super(view);

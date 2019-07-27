@@ -60,7 +60,7 @@ public class SubscriberTaskHistoryBinder extends RecyclerViewBinder<Subscription
                 amount=amount+Double.parseDouble(item.getItem().getAmount());
             }
         }
-        currencyCode="AED";
+        currencyCode="QAR";
         holder.txtCustomerName.setText(entity.getUser().getFullName()+"");
         holder.txtSubscriptionID.setText(entity.getSubscriptionId()+"");
         holder.txtServiceTitle.setText(entity.getSubscription().getTitle()+"");

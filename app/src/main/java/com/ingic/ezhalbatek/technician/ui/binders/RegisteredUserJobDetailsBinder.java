@@ -30,6 +30,7 @@ public class RegisteredUserJobDetailsBinder extends RecyclerViewBinder<ServicsLi
     public void bindView(ServicsList entity, int position, Object viewHolder, Context context) {
         ViewHolder holder = (ViewHolder) viewHolder;
         holder.txtItem.setText(entity.getServiceDetail().getTitle()+"");
+        holder.txtQuantity.setText(context.getResources().getString(R.string.qty)+ " "+entity.getQuantity()+"");
 
         holder.chkStatus.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -44,6 +45,9 @@ public class RegisteredUserJobDetailsBinder extends RecyclerViewBinder<ServicsLi
         AnyTextView txtItem;
         @BindView(R.id.chkStatus)
         CheckBox chkStatus;
+        @BindView(R.id.txt_Quantity)
+        AnyTextView txtQuantity;
+
 
         ViewHolder(View view) {
             super(view);

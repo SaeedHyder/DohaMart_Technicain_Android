@@ -74,7 +74,7 @@ public class UserTaskHistoryBinder extends RecyclerViewBinder<UserPaymentEnt> {
         holder.txtCustomerName.setText(entity.getUserDetail().getFullName() + "");
         holder.txtSubscriptionID.setText(entity.getId() + "");
         holder.txtServiceTitle.setText(entity.getJobTitle() + "");
-        holder.txtAdditionalCost.setText("AED " + amount);
+        holder.txtAdditionalCost.setText("QAR " + amount);
         holder.rbRating.setScore(1);*/
     }
 

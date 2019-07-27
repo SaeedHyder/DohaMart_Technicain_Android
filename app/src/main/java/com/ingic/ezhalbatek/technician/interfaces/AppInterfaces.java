@@ -15,7 +15,7 @@ public class AppInterfaces {
     }
 
     public interface SearchInterface{
-        void onSearchClick(Date dateSelected, int subscriptionId,int categoryId);
+        void onSearchClick(Date dateSelected,Date endDateSelected, int subscriptionId,int categoryId);
     }
 
 

@@ -25,10 +25,12 @@ public class AccessoriesExpendableBinder extends ExpandableListViewBinder<Access
 
     private int quantity = 0;
     private DockActivity dockActivity;
+    private String visitId;
 
-    public AccessoriesExpendableBinder(DockActivity dockActivity) {
+    public AccessoriesExpendableBinder(DockActivity dockActivity,String visitId) {
         super(R.layout.row_item_room_accessory_parent, R.layout.row_item_room_accessory_child);
         this.dockActivity=dockActivity;
+        this.visitId=visitId;
     }
 
     @Override
@@ -45,6 +47,10 @@ public class AccessoriesExpendableBinder extends ExpandableListViewBinder<Access
     @Override
     public void bindGroupView(Accessory entity, int position, int grpPosition, View view, Activity activity, boolean isExpended) {
         ParentViewHolder holder = (ParentViewHolder) view.getTag();
+
+        if(visitId.equals("")){
+            holder.chkStatus.setVisibility(View.GONE);
+        }
 
         if (isExpended) {
             holder.imgGroupIndicator.setRotation(180);

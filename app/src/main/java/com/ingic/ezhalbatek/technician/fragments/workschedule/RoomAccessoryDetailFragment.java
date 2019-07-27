@@ -69,6 +69,9 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
     Unbinder unbinder;
     @BindView(R.id.txtJobs)
     AnyTextView txtJobs;
+    @BindView(R.id.txtStatus)
+    AnyTextView txtStatus;
+
 
     private static String RoomKey = "RoomKey";
     @BindView(R.id.txtItem)
@@ -109,6 +112,14 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+    public static RoomAccessoryDetailFragment newInstance(CreateRoomEnt roomData) {
+        Bundle args = new Bundle();
+        args.putString(RoomKey, new Gson().toJson(roomData));
+        VisitId = "";
+        RoomAccessoryDetailFragment fragment = new RoomAccessoryDetailFragment();
+        fragment.setArguments(args);
+        return fragment;
+    }
 
 
     @Override
@@ -142,6 +153,10 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if(VisitId.equals("")){
+            btnDone.setVisibility(View.GONE);
+            txtStatus.setVisibility(View.GONE);
+        }
         serviceHelper.enqueueCall(webService.getRoomAccessories(createRoomEntity.getId() + ""), GetRoomAccessories);
 
     }
@@ -166,7 +181,7 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
 
         sharedDataModel = ViewModelProviders.of(getDockActivity()).get(SharedDataModel.class);
 
-        txtCurrencyCode.setText("AED");
+        txtCurrencyCode.setText(getDockActivity().getResources().getString(R.string.qar)+" ");
 
         if (RoomAccessories.size()> 0) {
 
@@ -191,7 +206,7 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
                 collectionChild = new ArrayList<>();
             }
 
-            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity()));
+            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),VisitId));
             expJobs.setAdapter(adapter);
             adapter.notifyDataSetChanged();
 
@@ -241,7 +256,7 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
                 }
 
             });*/
-            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity()));
+            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),""));
             expJobs.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         }
