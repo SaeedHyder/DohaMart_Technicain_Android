@@ -153,6 +153,8 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+
         if(VisitId.equals("")){
             btnDone.setVisibility(View.GONE);
             txtStatus.setVisibility(View.GONE);
@@ -206,7 +208,7 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
                 collectionChild = new ArrayList<>();
             }
 
-            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),VisitId));
+            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),VisitId,prefHelper));
             expJobs.setAdapter(adapter);
             adapter.notifyDataSetChanged();
 
@@ -256,7 +258,7 @@ public class RoomAccessoryDetailFragment extends BaseFragment {
                 }
 
             });*/
-            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),""));
+            adapter = new ArrayListExpandableAdapter<>(getDockActivity(), collectionGroup, listDataChild, new AccessoriesExpendableBinder(getDockActivity(),"",prefHelper));
             expJobs.setAdapter(adapter);
             adapter.notifyDataSetChanged();
         }

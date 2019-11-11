@@ -55,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="Language"
+            android:text="@string/language"
             android:layout_marginLeft="@dimen/x10"
             android:textColor="@color/app_font_gray"
             android:textSize="@dimen/x14"

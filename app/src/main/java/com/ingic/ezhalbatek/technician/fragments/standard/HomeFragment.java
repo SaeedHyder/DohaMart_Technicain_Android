@@ -16,22 +16,17 @@ import android.widget.ImageView;
 import com.ingic.ezhalbatek.technician.R;
 import com.ingic.ezhalbatek.technician.fragments.abstracts.BaseFragment;
 import com.ingic.ezhalbatek.technician.fragments.customerlist.CustomerMasterMainFragment;
-import com.ingic.ezhalbatek.technician.fragments.customerlist.CustomerSubscriberFragment;
 import com.ingic.ezhalbatek.technician.fragments.orderhistory.OrderHistoryFragment;
 import com.ingic.ezhalbatek.technician.fragments.payments.RecieptPaymentFragment;
-import com.ingic.ezhalbatek.technician.fragments.workschedule.AdditionalTaskFragment;
 import com.ingic.ezhalbatek.technician.fragments.workschedule.CalenderJobsFragment;
 import com.ingic.ezhalbatek.technician.global.AppConstants;
 import com.ingic.ezhalbatek.technician.ui.views.AnyTextView;
 import com.ingic.ezhalbatek.technician.ui.views.TitleBar;
 import com.nostra13.universalimageloader.core.ImageLoader;
-import com.squareup.picasso.Picasso;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
-
-import static com.ingic.ezhalbatek.technician.global.WebServiceConstants.GetRequestData;
 
 
 public class HomeFragment extends BaseFragment {
@@ -180,6 +175,9 @@ public class HomeFragment extends BaseFragment {
 
         LocalBroadcastManager.getInstance(getDockActivity()).registerReceiver(broadcastReceiver,
                 new IntentFilter(AppConstants.PUSH_NOTIFICATION));
+
     }
+
+
 }
 

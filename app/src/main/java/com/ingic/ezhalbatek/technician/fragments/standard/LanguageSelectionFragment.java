@@ -71,11 +71,21 @@ public class LanguageSelectionFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_english:
-                //getDockActivity().popBackStackTillEntry(0);
-                getDockActivity().replaceDockableFragment(LoginFragment.newInstance(),"LoginFragment");
+                prefHelper.setLanguageSelected(true);
+
+                if (!prefHelper.isLanguageArabian()) {
+                    getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                } else {
+                    prefHelper.putLang(getDockActivity(), "en");
+                }
+
                 break;
             case R.id.btn_arabic:
-                willbeimplementedinBeta();
+                if (prefHelper.isLanguageArabian()) {
+                    getDockActivity().replaceDockableFragment(LoginFragment.newInstance(), "LoginFragment");
+                } else {
+                    prefHelper.putLang(getDockActivity(), "ar");
+                }
                 break;
         }
     }

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
-        android:paddingLeft="@dimen/x20"
+        android:paddingStart="@dimen/x20"
         android:src="@drawable/tick" />
 
     <com.ingic.ezhalbatek.technician.ui.views.AnyTextView
@@ -23,8 +23,8 @@
         android:layout_marginEnd="@dimen/x1"
         android:layout_toEndOf="@id/delete_text"
         android:maxLines="1"
-        android:paddingLeft="@dimen/x15"
-
+        android:paddingStart="@dimen/x15"
+        android:textAlignment="viewStart"
 
         android:text="Checked Air Conditioner"
         android:textColor="@color/app_font_dark_gray"

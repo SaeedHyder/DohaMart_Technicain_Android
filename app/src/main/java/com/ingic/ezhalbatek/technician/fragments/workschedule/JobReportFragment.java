@@ -167,6 +167,13 @@ public class JobReportFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
 
 
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
         if (entityVisit != null) {
             setVisitData(entityVisit);
 

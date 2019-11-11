@@ -77,7 +77,6 @@ public class CalenderJobsFragment extends BaseFragment {
         calendar.set(Calendar.DATE, calendar.getActualMaximum(Calendar.DAY_OF_MONTH));
         String lastDay = dateFormatter.format(calendar.getTime());
 
-
         serviceHelper.enqueueCall(webService.getAllJobs(prefHelper.getUser().getId() + "", firstDay, lastDay), getAllJobs);
 
         calendarView.setPagingEnabled(false);

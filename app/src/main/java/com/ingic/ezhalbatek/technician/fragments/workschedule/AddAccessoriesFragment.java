@@ -113,6 +113,7 @@ public class AddAccessoriesFragment extends BaseFragment {
         super.onViewCreated(view, savedInstanceState);
         //sharedDataModel = ViewModelProviders.of(getDockActivity()).get(SharedDataModel.class);
         //generateDummyData();
+
         serviceHelper.enqueueCall(webService.allAccessories(), AllAccessories);
         serviceHelper.enqueueCall(webService.getBrands(), getBrands);
 

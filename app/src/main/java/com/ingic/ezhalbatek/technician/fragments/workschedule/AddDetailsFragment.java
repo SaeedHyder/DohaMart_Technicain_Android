@@ -135,6 +135,13 @@ public class AddDetailsFragment extends BaseFragment implements OnLongTap {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
         prefHelper.setIsFromRequest(false);
         setData();
         btnMoreRoom.setVisibility(View.VISIBLE);

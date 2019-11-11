@@ -65,7 +65,7 @@
         android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
         android:gravity="center"
-        android:text="Delete All"
+        android:text="@string/delete_all"
         android:paddingEnd="@dimen/x15"
         android:paddingStart="@dimen/x15"
         android:textColor="@color/app_red"

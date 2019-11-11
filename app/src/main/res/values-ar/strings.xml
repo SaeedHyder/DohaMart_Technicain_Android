@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Ezhalbatek Technician </string>
+
+    <!-- mark favourite message -->
+
+    <string name="api_key">AIzaSyCDylplefNyWlLDoBL_n2VFjwlMWvq3sBg  </string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Error Messages -->
+    <string name="msg_connection_failed">Error! Connection to server failed.</string>
+    <string name="msg_connection_error">Please check your internet connection</string>
+
+    <!-- Date Time -->
+
+    <!-- AnyTextView -->
+    <string name="typeface_not_found">Typeface %$1 not found, or could not be loaded.
+        Showing default typeface.</string>
+    <string name="app">AnyTextView</string>
+    <string name="assets_fonts_folder">fonts/</string>
+
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and types
+        etting industry. Lorem Ipsum has been the industrys standard dummy text ever sinc
+        e the 1500s, when an unknown printer took a galley of type and scrambled it t
+        o make a type specimen book. It has survived not only five centuries, but
+         also the leap into electronic typesetting, remaining essentially unchanged
+         . It was popularised in the 1960s with the release of Letraset sheets cont
+         aining Lorem Ipsum passages, and more recently with desktop publishing so
+         ftware like Aldus PageMaker including versions of Lorem Ipsum.</string>
+
+
+
+
+    <!--FONTS-->
+    <string name="font_normal">Raleway-ExtraLight_0.ttf</string>
+    <!-- <string name="font_normal_dark">Roboto-Regular.ttf</string>-->
+    <string name="font_normal_dark">OpenSans-Regular.ttf</string>
+    <string name="font_normal_bold">Roboto-Bold.ttf</string>
+    <!--  <string name="font_bold">Roboto-Italic_2.ttf</string>-->
+    <string name="font_bold">Raleway-SemiBold_0.ttf</string>
+
+    ////////////////////////APP String/////////////////////////////
+
+    <string name="message_quit">هل أنت متأكد أنك تريد الخروج؟</string>
+    <string name="message_wait">يرجى الانتظار بينما يتم تحميل البيانات.</string>
+    <string name="default_hint_text">لى اين انت ذاهب؟</string>
+
+    <string name="connection_lost">لا يوجد إتصال بالشبكة</string>
+    <string name="guest_message">يرجى الاشتراك أو تسجيل الدخول للمتابعة!</string>
+    <string name="enter_valid_email">الرجاء إدخال بريد إلكتروني صحيح</string>
+    <string name="enter_password">لا يمكن أن يكون رمز التسجيل فارغاً</string>
+    <string name="passwordLength">لا يمكن أن يكون رمز التسجيل أقل من ٦ أحرف</string>
+    <string name="phone">الهاتف</string>
+    <string name="enter_phone">لا يمكن أن يكون رقم الهاتف فارغاً</string>
+    <string name="numberLength">الهاتف المحمول غير صحيح</string>
+    <string name="zipcode">الرمز البريدي</string>
+    <string name="full_name">الاسم الكامل</string>
+    <string name="enter_name">ادخل الاسم</string>
+    <string name="enter_city">ادخل اسم المدينة</string>
+    <string name="enter_zipcode">ادخل الرمز البريدي</string>
+    <string name="city">المدينة</string>
+    <string name="subscriber_id">رمز المشترك : </string>
+    <string name="procedd_payment">جاري الدفع</string>
+    <string name="addtional_job_description">اكتب وصف الخدمة الاضافية هنا…</string>
+    <string name="location_dummy">ادخل موقعك هنا</string>
+    <string name="select_date">حدد التاريخ</string>
+    <string name="start_date">تاريخ البدء</string>
+    <string name="end_date">تاريخ الانتهاء</string>
+    <string name="select_time">حدد الوقت</string>
+    <string name="payment_option_value">سيتم الدفع نقداً عند تقديم الخدمة</string>
+    <string name="term_option_value">أوافق على جميع الشروط وسياسة الخصوصية</string>
+    <string name="date_before_error">لقد قمت باختيار تاريخ قبل التاريخ الحالي</string>
+    <string name="less_time_error">يرجى تحديد وقت الوصول</string>
+    <string name="select_date_error">اختر التاريخ اولاً</string>
+    <string name="user_name">اسم المستخدم</string>
+    <string name="rating">التقييم :</string>
+    <string name="date">التاريخ :</string>
+    <string name="contact_number">رقم التواصل</string>
+    <string name="confirm_password_error">تأكيد كلمة المرور غير متطابقة</string>
+    <string name="new_jobs_1">خدمة جديدة :</string>
+    <string name="old_number">الرقم القديم</string>
+    <string name="new_number">الرقم الجديد</string>
+    <string name="enter_query">اكتب استعلاماً واحداً على الأقل</string>
+    <string name="turn_notification">تفعيل الاشعارات</string>
+    <string name="add_additional_job">هل انت متأكد انك تريد إضافة هذه الخدمة؟</string>
+    <string name="job_done_message">هل انت متأكد انك تريد إكمال هذه الخدمة؟</string>
+    <string name="payment_receipt">إيصال الدفع</string>
+    <string name="permission_error">مطلوب إذن للوصول الى هذه الميزة</string>
+    <string name="enter_registration_code">ادخل رمز التسجيل</string>
+    <string name="enter_valid_city">ادخل رمز المدينة</string>
+    <string name="new_jobs">خدمة جديدة</string>
+    <string name="receive_payments">الاستلام/ الدفع</string>
+    <string name="order_history">تاريخ الطلب</string>
+    <string name="curtomer_master_list">قائمة العملاء الرئيسية</string>
+    <string name="calender">التقويم</string>
+    <string name="subscriber_task">مهام المشترك</string>
+    <string name="normal_tasks">خدمة 24/7</string>
+    <string name="request_id">طلب الهوية :</string>
+    <string name="request_title">عنوان الطلب :</string>
+    <string name="time">الوقت :</string>
+    <string name="payments">الدفع</string>
+    <string name="total_earning">مجموع الأرباح :</string>
+    <string name="customer_no">رقم العميل :</string>
+    <string name="customer_no_">رقم العميل </string>
+    <string name="date_time_">التاريخ/ الوقت</string>
+    <string name="add_details">إضافة التفاصيل</string>
+    <string name="report">التقرير</string>
+    <string name="mobile_no">رقم الهاتف :</string>
+    <string name="create_room">انشاء غرفة</string>
+    <string name="delete_room">حذف غرفة</string>
+    <string name="delete_notification_">حذف الاشعارات</string>
+    <string name="item">البند</string>
+    <string name="brand">العلامة التجارية</string>
+    <string name="type">النوع</string>
+    <string name="model">النموذج</string>
+    <string name="quantity">الكمية</string>
+    <string name="add_accessories">إضافة الملحقات</string>
+    <string name="maintainence_date">تاريخ الصيانة :</string>
+    <string name="view_status">عرض الحالة</string>
+    <string name="brand_name">اسم العلامة التجارية :</string>
+    <string name="work_schedule">جدول العمل</string>
+    <string name="accessory_type">النوع :</string>
+    <string name="accessory_model">النموذج :</string>
+    <string name="accessory_quantity">الكمية :</string>
+    <string name="qar">QAR</string>
+    <string name="task">المهام</string>
+    <string name="add_task">اضافة مهام</string>
+    <string name="accessories">الملحقات</string>
+    <string name="send">إرسال</string>
+    <string name="view_status_title">حالة الصيانة الشهرية</string>
+    <string name="service_title">عنوان الخدمة :</string>
+    <string name="service_category">فئة الخدمة :</string>
+    <string name="addtional_task_">مهام اضافية :</string>
+    <string name="cost">التكلفة :</string>
+    <string name="job_status">حالة الخدمة</string>
+    <string name="empty_password">لا يمكن أن تكون كلمة المرور فارغة</string>
+    <string name="password_short">يجب ان تكون كلمة السر اكثر من 6 احرف</string>
+    <string name="maintainence_date_">تاريخ الصيانة</string>
+    <string name="customer_list_title">التفاصيل الكاملة للعميل وجميع معاملاته</string>
+    <string name="customer_master_list">قائمة العملاء الرئيسية</string>
+    <string name="technician_visits">زيارات الفني</string>
+    <string name="package_type">نوع الباقة :</string>
+    <string name="select_all_accessories">حدد جميع الملحقات للمتابعة</string>
+    <string name="select_all_jobs">حدد جميع الوظائف للمتابعة</string>
+    <string name="add_accessoires">اضافة ملحقات</string>
+    <string name="password_changed_successfully">تم تغيير الرمز السري بنجاح</string>
+    <string name="search_by_customer_name_or_id">البحث عن طريق اسم العميل أو الهوية</string>
+    <string name="search_customer">البحث عن العميل</string>
+    <string name="select_category">اختر الفئة</string>
+    <string name="select_subscription_pakage">حدد باقة الاشتراك</string>
+    <string name="no_order_history_found">لم يتم العثور على سجل الطلبات</string>
+    <string name="no_payment_found">لم يتم العثور على الدفع </string>
+    <string name="no_notification_found">لا توجد اشعارات</string>
+    <string name="additional_tasks">مهمة إضافية</string>
+    <string name="inventory">المخزون</string>
+    <string name="no_new_job_found">لم يتم العثور على خدمة جديدة</string>
+    <string name="view_accessories">عرض الملحقات</string>
+    <string name="additional_task">مهام اضافية</string>
+    <string name="select_additional_job">حدد خدمة اضافيه للمتابعه</string>
+    <string name="delete_notification">حذف الاشعار</string>
+    <string name="job_completed_successfully">تم اكمال العمل بنجاح</string>
+    <string name="blocked_by_admin">محظور من قبل المشرف</string>
+    <string name="admin">المشرف</string>
+    <string name="visit_date">تاريخ الزيارة : </string>
+    <string name="no_additional_item_assigned">لم يتم تعيين عنصر إضافي</string>
+    <string name="room_text_error">ادخل اسم الغرفة للمتابعة.</string>
+    <string name="additional_cost_1">تكلفة إضافية:</string>
+    <string name="checked">التحقق</string>
+
+
+
+    <string name="notification">الإشعارات</string>
+    <string name="imgdesc_signin">تسجيل الدخول</string>
+    <string name="english">انجليزي</string>
+    <string name="arabic">عربي</string>
+    <string name="email">البريد الالكتروني</string>
+    <string name="sign_in">تسجيل الدخولتسجيل الدخول</string>
+    <string name="submit">إرسال</string>
+    <string name="forgot_password_title">هل نسيت كلمة المرور</string>
+    <string name="select_language">اختيار اللغة</string>
+    <string name="twenty_seven">24/7 الخدمات</string>
+    <string name="facilities">مرافق</string>
+    <string name="subscription_price">أسعار الاشتراكات</string>
+    <string name="customer_name">اسم العميل : </string>
+    <string name="address">العنوان : </string>
+    <string name="phone_number">رقم الهاتف : </string>
+    <string name="customer_email">البريد الإلكتروني : </string>
+    <string name="home">الصفحة الرئيسية</string>
+    <string name="settings">إعدادات التطبيق</string>
+    <string name="logout">تسجيل الخروج</string>
+    <string name="description">الوصف :</string>
+    <string name="request_service">طلب الخدمة</string>
+    <string name="selected_jobs">الخدمات المختارة</string>
+    <string name="additional_job">أعمال اضافيه</string>
+    <string name="additional_jobs">أعمال اضافيه: </string>
+    <string name="location">الموقع</string>
+    <string name="address_request">العنوان</string>
+    <string name="preferred_date_time">الوقت/ التاريخ المناسب</string>
+    <string name="job_title">عنوان الخدمة</string>
+    <string name="terms">الشروط </string>
+    <string name="privacy">سياسة الخصوصية</string>
+    <string name="book_service">سجل الطلب</string>
+    <string name="subscription_package">باقة الاشتراك :</string>
+    <string name="next_visit">تاريخ الزيارة القادمة :</string>
+    <string name="view_report">عرض التقرير</string>
+    <string name="rate_technicain">تيقيم فني الخدمة</string>
+    <string name="write_feedback_here">...اكتب ملاحظاتك هنا</string>
+    <string name="confirm">التاكيد</string>
+    <string name="update">تحديث</string>
+    <string name="query_hint">اكتب استفسارك هنا..</string>
+    <string name="change_password">تغيير كلمة المرور</string>
+    <string name="change_language">تغيير اللغة</string>
+    <string name="about_app">حول تطبيق ازهل بيتك</string>
+    <string name="call_us">اتصل بنا</string>
+    <string name="old_password">كلمة المرور القديمة</string>
+    <string name="new_password">كلمة المرور الجديدة</string>
+    <string name="re_enter_password">اعد ادخال كلمة المرور</string>
+     <string name="view_details">عرض التفاصيل</string>
+    <string name="jobs">الخدمات :</string>
+    <string name="yes">نعم</string>
+    <string name="no">كلا</string>
+    <string name="cancel_message">هل انت متاكد من إلغاء الطلب؟</string>
+    <string name="delete_message">هل تريد بالتأكيد حذف جميع الإشعارات؟</string>
+    <string name="delete_all_message">هل تريد بالتأكيد حذف جميع الإشعارات؟</string>
+    <string name="job_done">تم إنجاز العمل</string>
+    <string name="thankyou">شكرا لك</string>
+    <string name="empty"/>
+    <string name="ok">تم</string>
+    <string name="package_detail">تفاصيل الباقات</string>
+    <string name="request_for_service">طلب الخدمة</string>
+    <string name="request_send">تم ارسال الطلب</string>
+    <string name="edit_profile">تعديل الملف الشخصي</string>
+    <string name="rate_review">التقييم والاراء</string>
+    <string name="app_settings">إعدادات التطبيق</string>
+    <string name="change_number">تغيير الرقم</string>
+    <string name="contact_form">نموذج الاتصال</string>
+    <string name="logout_message">هل أنت متأكد أنك تريد تسجيل الخروج؟</string>
+    <string name="_date">التاريخ :</string>
+    <string name="extra_cost">تكلفة إضافيه : </string>
+    <string name="details">عرض التفاصيل</string>
+    <string name="monthly_maintainence">الصيانة الشهرية</string>
+    <string name="price">أسعار الاشتراكات</string>
+    <string name="addtional_task">أعمال اضافيه</string>
+    <string name="jobs_">الخدمات</string>
+    <string name="status">الحالة</string>
+    <string name="statuss">الحالة : </string>
+     <string name="location_">الموقع :</string>
+    <string name="view_details_"><u>عرض التفاصيل</u></string>
+    <string name="technician_name_">اسم الفني</string>
+   <string name="search">البحث</string>
+   <string name="task_title">24/7</string>
+    <string name="total">المجموع</string>
+      <string name="monthly_maintaince">الصيانة الشهرية</string>
+    <string name="delete_notification_message">هل أنت متأكد أنك تريد حذف هذا الإشعار؟</string>
+     <string name="qty">Qty </string>
+    <string name="delete_all">حذف الكل</string>
+    <string name="language">تغيير اللغة</string>
+    <string name="no_customer_found">لم يتم العثور على العملاء</string>
+    <string name="done">تم إنجاز</string>
+
+</resources>

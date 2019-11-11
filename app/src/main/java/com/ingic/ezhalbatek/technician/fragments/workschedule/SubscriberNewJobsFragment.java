@@ -77,6 +77,13 @@ public class SubscriberNewJobsFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
         serviceHelper.enqueueCall(webService.getNewSubscriptionJobs(prefHelper.getUser().getId() + "", selectedDate), getSubscriptionJobs);
         prefHelper.setIsFromRequest(false);
 

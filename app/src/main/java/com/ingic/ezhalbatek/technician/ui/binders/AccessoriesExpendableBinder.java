@@ -12,6 +12,7 @@ import com.ingic.ezhalbatek.technician.activities.DockActivity;
 import com.ingic.ezhalbatek.technician.entities.AccessoriesDataEnt;
 import com.ingic.ezhalbatek.technician.entities.Accessory;
 import com.ingic.ezhalbatek.technician.entities.AccessoryItemDetailCustom;
+import com.ingic.ezhalbatek.technician.helpers.BasePreferenceHelper;
 import com.ingic.ezhalbatek.technician.ui.viewbinders.abstracts.ExpandableListViewBinder;
 import com.ingic.ezhalbatek.technician.ui.views.AnyTextView;
 
@@ -26,11 +27,13 @@ public class AccessoriesExpendableBinder extends ExpandableListViewBinder<Access
     private int quantity = 0;
     private DockActivity dockActivity;
     private String visitId;
+    private BasePreferenceHelper prefHelper;
 
-    public AccessoriesExpendableBinder(DockActivity dockActivity,String visitId) {
+    public AccessoriesExpendableBinder(DockActivity dockActivity, String visitId, BasePreferenceHelper prefHelper) {
         super(R.layout.row_item_room_accessory_parent, R.layout.row_item_room_accessory_child);
         this.dockActivity=dockActivity;
         this.visitId=visitId;
+        this.prefHelper=prefHelper;
     }
 
     @Override
@@ -84,6 +87,13 @@ public class AccessoriesExpendableBinder extends ExpandableListViewBinder<Access
     public void bindChildView(AccessoryItemDetailCustom entity, int position, int grpPosition, View view, Activity activity) {
 
         ChildViewHolder holder = (ChildViewHolder) view.getTag();
+
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
 
         if (entity != null) {
             holder.txtBrandName.setText(entity.getBrandName() + "");

@@ -2,10 +2,14 @@ package com.prolificinteractive.materialcalendarview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Parcel;
 import android.os.Parcelable;
 import android.support.annotation.ArrayRes;
@@ -14,6 +18,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.util.SparseArray;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -41,6 +46,7 @@ import java.util.Calendar;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * <p>
@@ -219,6 +225,8 @@ public class MaterialCalendarView extends ViewGroup {
         titleChanger = new TitleChanger(title);
         titleChanger.setTitleFormatter(DEFAULT_TITLE_FORMATTER);
 
+
+
         pager.setOnPageChangeListener(pageChangeListener);
         pager.setPageTransformer(false, new ViewPager.PageTransformer() {
             @Override
@@ -370,6 +378,26 @@ public class MaterialCalendarView extends ViewGroup {
      */
     public static boolean showOtherMonths(@ShowOtherDates int showOtherDates) {
         return (showOtherDates & SHOW_OTHER_MONTHS) != 0;
+    }
+
+    public void setLocale(){
+        Resources resources = getContext().getResources();
+        DisplayMetrics dm = resources.getDisplayMetrics();
+        Configuration conf = resources.getConfiguration();
+        Locale locale=new Locale("ar");
+        //   conf.setLayoutDirection(locale);
+        conf.locale = locale;
+        resources.updateConfiguration(conf, dm);
+    }
+
+    public void setEnglishLcale(){
+        Resources resources = getResources();
+        DisplayMetrics dm = resources.getDisplayMetrics();
+        Configuration conf = resources.getConfiguration();
+        Locale locale=new Locale("en");
+        //  conf.setLayoutDirection(locale);
+        conf.locale = locale;
+        resources.updateConfiguration(conf, dm);
     }
 
     /**

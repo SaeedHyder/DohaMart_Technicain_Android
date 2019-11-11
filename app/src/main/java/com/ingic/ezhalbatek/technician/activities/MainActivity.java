@@ -4,6 +4,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -57,6 +59,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.display.RoundedBitmapDisplayer;
 
 import java.util.HashMap;
+import java.util.Locale;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -427,6 +430,8 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
         settingSideMenu(sideMenuType, sideMenuDirection);
 
+        setCurrentLocale();
+
         titleBar.setMenuButtonListener(new OnClickListener() {
 
             @Override
@@ -583,5 +588,42 @@ public class MainActivity extends DockActivity implements OnClickListener {
 
             }
         });
+    }
+
+    private void setCurrentLocale() {
+        if (prefHelper.isLanguageArabian()) {
+            Resources resources = getResources();
+            DisplayMetrics dm = resources.getDisplayMetrics();
+            Configuration conf = resources.getConfiguration();
+            Locale locale=new Locale("ar");
+            //   conf.setLayoutDirection(locale);
+            conf.locale = locale;
+            resources.updateConfiguration(conf, dm);
+
+
+        } else {
+            Resources resources = getResources();
+            DisplayMetrics dm = resources.getDisplayMetrics();
+            Configuration conf = resources.getConfiguration();
+            Locale locale=new Locale("en");
+            //  conf.setLayoutDirection(locale);
+            conf.locale = locale;
+            resources.updateConfiguration(conf, dm);
+
+
+        }
+    }
+    public void restartActivity() {
+        Intent intent = getIntent();
+        if (getIntent().getExtras() != null) {
+            Bundle bundle = new Bundle();
+            bundle.putString("actionType", "");
+            bundle.putString("action_type", "");
+            bundle.putString("title", "");
+            intent.putExtras(bundle);
+        }
+
+        finish();
+        startActivity(intent);
     }
 }

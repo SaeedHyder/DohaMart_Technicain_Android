@@ -113,6 +113,7 @@ public class AdditionalTaskFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
         serviceHelper.enqueueCall(webService.getAdditionalJobs(prefHelper.getUser().getId() + ""), AdditionalJob);
 
     }

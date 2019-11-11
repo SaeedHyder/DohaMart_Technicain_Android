@@ -70,6 +70,17 @@ public class SettingFragment extends BaseFragment {
             swtNotification.setChecked(false);
         }
 
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+            btnEnglish.setTextColor(getResources().getColor(R.color.app_font_gray));
+            btnArabic.setTextColor(getResources().getColor(R.color.app_red));
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+            btnEnglish.setTextColor(getResources().getColor(R.color.app_red));
+            btnArabic.setTextColor(getResources().getColor(R.color.app_font_gray));
+        }
+
         swtNotification.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -105,10 +116,14 @@ public class SettingFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_english:
-                UIHelper.showShortToastInCenter(getDockActivity(), "Will be implemented in future version");
+                btnEnglish.setTextColor(getResources().getColor(R.color.app_red));
+                btnArabic.setTextColor(getResources().getColor(R.color.app_font_gray));
+                prefHelper.putLang(getDockActivity(), "en");
                 break;
             case R.id.btn_Arabic:
-                UIHelper.showShortToastInCenter(getDockActivity(), "Will be implemented in future version");
+                btnEnglish.setTextColor(getResources().getColor(R.color.app_font_gray));
+                btnArabic.setTextColor(getResources().getColor(R.color.app_red));
+                prefHelper.putLang(getDockActivity(), "ar");
                 break;
             case R.id.btnChangePassword:
                 getDockActivity().replaceDockableFragment(ChangePasswordFragment.newInstance(), ChangePasswordFragment.TAG);

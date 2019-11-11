@@ -126,6 +126,13 @@ public class SubscriberJobDetailFragment extends BaseFragment implements OnLongT
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
         txtSubscriptionPackage.setSelected(true);
         mainFrameLayout.setVisibility(View.GONE);
         prefHelper.setIsFromRequest(false);

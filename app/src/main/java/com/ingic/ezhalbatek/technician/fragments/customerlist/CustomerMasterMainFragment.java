@@ -54,6 +54,14 @@ public class CustomerMasterMainFragment extends BaseFragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+
+        if (prefHelper.isLanguageArabian()) {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
+
+        } else {
+            view.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
+        }
+
         if (prefHelper.isFromCustomerMasterSub()) {
             changeColorToSelected(btnSubscriber);
             changeColorToUnSelected(btnRegisted);

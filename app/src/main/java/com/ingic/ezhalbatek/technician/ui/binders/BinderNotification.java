@@ -54,7 +54,11 @@ public class BinderNotification extends RecyclerViewBinder<NotificationsEnt> {
     public void bindView(NotificationsEnt entity, int position, Object holder, Context context) {
 
         ViewHolder viewHolder = (ViewHolder) holder;
-        viewHolder.txtJobNotification.setText(entity.getMessage());
+        if (preferenceHelper.isLanguageArabian()) {
+            viewHolder.txtJobNotification.setText(entity.getArMessage());
+        } else {
+            viewHolder.txtJobNotification.setText(entity.getMessage());
+        }
 
         if (entity.getState()!=null && entity.getState().equals("0") || entity.getState().equals("1")) {
             viewHolder.mainFrameLayout.setBackground(context.getResources().getDrawable(R.drawable.unread_background));
